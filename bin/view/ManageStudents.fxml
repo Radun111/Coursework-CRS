@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #005c8a, #003d5b);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="900.0" style="-fx-background-color: #003d5b;">
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10;" text="Manage Students" />
+    </HBox>
+    
+    <!-- Sidebar Menu -->
+    <VBox alignment="CENTER" layoutX="10.0" layoutY="90.0" prefWidth="200.0" spacing="15" style="-fx-background-color: #004f70; -fx-background-radius: 10; -fx-padding: 20;">
+        <Button text="Add Student" fx:id="btnAdd" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        <Button text="Update Student" fx:id="btnUpdate" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        <Button text="Delete Student" fx:id="btnDelete" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        <Button text="Back to Dashboard" fx:id="btnBack" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+    </VBox>
+    
+    <!-- Main Content -->
+    <VBox alignment="CENTER_LEFT" layoutX="230.0" layoutY="90.0" prefHeight="450.0" prefWidth="650.0" spacing="15">
+        
+        <!-- Search Field -->
+        <HBox spacing="10">
+            <TextField fx:id="searchField" promptText="Search Student by Name or ID" prefWidth="400.0" style="-fx-background-radius: 10; -fx-padding: 5;" />
+            <Button text="Search" fx:id="btnSearch" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        </HBox>
+        
+        <!-- TableView for Student Data -->
+        <TableView fx:id="studentsTable" prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: #e3f2fd; -fx-background-radius: 10;">
+            <columns>
+                <TableColumn fx:id="colStudentID" text="Student ID" prefWidth="100" />
+                <TableColumn fx:id="colName" text="Name" prefWidth="150" />
+                <TableColumn fx:id="colDOB" text="Date of Birth" prefWidth="100" />
+                <TableColumn fx:id="colProgram" text="Program of Study" prefWidth="150" />
+                <TableColumn fx:id="colYear" text="Year" prefWidth="80" />
+                <TableColumn fx:id="colContact" text="Contact" prefWidth="150" />
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #005c8a, #003d5b);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="900.0" style="-fx-background-color: #003d5b;">
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10;" text="Generate Reports" />
+    </HBox>
+    
+    <!-- Sidebar Menu -->
+    <VBox alignment="CENTER" layoutX="10.0" layoutY="90.0" prefWidth="200.0" spacing="15" style="-fx-background-color: #004f70; -fx-background-radius: 10; -fx-padding: 20;">
+        <Button style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" text="Enrollment Report" />
+        <Button style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" text="Course Vacancies" />
+        <Button style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" text="Student Progress" />
+        <Button style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" text="Back to Dashboard" />
+    </VBox>
+    
+    <!-- Main Content -->
+    <VBox layoutX="230.0" layoutY="90.0" prefHeight="450.0" prefWidth="650.0" spacing="20">
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: white;" text="Select Report Type" />
+        <ComboBox fx:id="reportTypeComboBox" prefWidth="400.0" promptText="Choose Report Type" style="-fx-background-radius: 10;" />
+        
+        <HBox spacing="10">
+            <Label style="-fx-font-size: 16px; -fx-text-fill: white;" text="Start Date:" />
+            <DatePicker fx:id="startDatePicker" />
+            <Label style="-fx-font-size: 16px; -fx-text-fill: white;" text="End Date:" />
+            <DatePicker fx:id="endDatePicker" />
+        </HBox>
+        
+        <Button fx:id="generateReportButton" text="Generate Report" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        
+        <TableView fx:id="reportTable" prefHeight="250.0" prefWidth="600.0" style="-fx-background-radius: 10;">
+            <columns>
+                <TableColumn text="Report Details" />
+            </columns>
+        </TableView>
+        
+        <HBox spacing="10">
+            <Button fx:id="exportPDFButton" text="Export as PDF" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 10;" />
+            <Button fx:id="exportExcelButton" text="Export as Excel" style="-fx-background-color: #ffc107; -fx-text-fill: black; -fx-background-radius: 10;" />
+            <Button fx:id="printButton" text="Print Report" style="-fx-background-color: #17a2b8; -fx-text-fill: white; -fx-background-radius: 10;" />
+        </HBox>
+    </VBox>
+</AnchorPane>
