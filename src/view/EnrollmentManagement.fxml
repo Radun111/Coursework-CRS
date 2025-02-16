@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #005c8a, #003d5b);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="900.0" style="-fx-background-color: #003d5b;">
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10;" text="Enrollment Management" />
+    </HBox>
+
+    <!-- Sidebar -->
+    <VBox alignment="CENTER" layoutX="10.0" layoutY="90.0" prefWidth="200.0" spacing="15" style="-fx-background-color: #004f70; -fx-background-radius: 10; -fx-padding: 20;">
+        <Button text="View Enrollments" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        <Button text="Add Enrollment" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        <Button text="Drop Enrollment" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+    </VBox>
+
+    <!-- Main Content Area -->
+    <VBox layoutX="230.0" layoutY="90.0" prefHeight="450.0" prefWidth="650.0" spacing="15">
+        
+        <!-- Search Student -->
+        <HBox spacing="10">
+            <TextField fx:id="studentSearchField" promptText="Search by Student ID or Name" prefWidth="400" style="-fx-font-size: 14px;" />
+            <Button text="Search" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        </HBox>
+        
+        <!-- Course Selection -->
+        <Label text="Select Course:" style="-fx-font-size: 16px; -fx-text-fill: white;" />
+        <ComboBox fx:id="courseComboBox" promptText="Choose Course" prefWidth="600" style="-fx-font-size: 14px;" />
+        
+        <!-- Enrollment Table -->
+        <TableView fx:id="enrollmentTable" prefHeight="250.0" prefWidth="600.0" style="-fx-background-color: #e3f2fd;">
+            <columns>
+                <TableColumn text="Student ID" prefWidth="120.0" />
+                <TableColumn text="Student Name" prefWidth="180.0" />
+                <TableColumn text="Course ID" prefWidth="120.0" />
+                <TableColumn text="Course Title" prefWidth="180.0" />
+                <TableColumn text="Status" prefWidth="100.0" />
+            </columns>
+        </TableView>
+        
+        <!-- Action Buttons -->
+        <HBox spacing="10">
+            <Button text="Add Enrollment" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+            <Button text="Drop Enrollment" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" />
+        </HBox>
+        
+    </VBox>
+</AnchorPane>

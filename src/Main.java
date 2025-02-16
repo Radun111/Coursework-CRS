@@ -14,13 +14,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL resource = getClass().getResource("/view/StudentDashboard.fxml"); 
+        URL resource = getClass().getResource("/view/sturegistercourses.fxml"); 
         if (resource == null) {
             throw new IllegalStateException("FXML file 'Main.fxml' not found in /view directory!");
         }
         Parent root = FXMLLoader.load(resource);
         primaryStage.setScene(new Scene(root));
-        primaryStage.setTitle("Login");
+        primaryStage.setTitle("Register Courses");
         primaryStage.show();
     }
 

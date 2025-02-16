@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="436.0" style="-fx-background-color: #34495e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="532.0" prefWidth="427.0" style="-fx-background-color: linear-gradient(to bottom, #004d61, #00293c);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     
     <Label layoutX="110.0" layoutY="30.0" style="-fx-font-size: 24px; -fx-font-family: 'Arial Black'; -fx-text-fill: #ecf0f1;" text="Student Sign-Up" />
 
@@ -23,6 +23,6 @@
     <PasswordField fx:id="txtConfirmPassword" layoutX="176.0" layoutY="198.0" prefWidth="200.0" style="-fx-background-color: #ecf0f1; -fx-border-radius: 10;" />
 
    
-    <Button fx:id="btnSignUp" layoutX="177.0" layoutY="286.0" style="-fx-font-size: 14px; -fx-background-color: #2ecc71; -fx-text-fill: #ffffff; -fx-background-radius: 10;" text="Sign Up" />
-    <Button fx:id="btnBackToLogin" layoutX="153.0" layoutY="340.0" prefHeight="30.0" prefWidth="115.0" style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: #ffffff; -fx-background-radius: 10;" text="Back to Login" />
+    <Button fx:id="btnSignUp" layoutX="180.0" layoutY="282.0" style="-fx-font-size: 14px; -fx-background-color: #2ecc71; -fx-text-fill: #ffffff; -fx-background-radius: 10;" text="Sign Up" />
+    <Button fx:id="btnBackToLogin" layoutX="159.0" layoutY="332.0" prefHeight="30.0" prefWidth="115.0" style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: #ffffff; -fx-background-radius: 10;" text="Back to Login" />
 </AnchorPane>

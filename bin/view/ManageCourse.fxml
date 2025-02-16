@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom, #005c8a, #003d5b);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="900.0" style="-fx-background-color: #003d5b;">
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10;" text="Manage Courses" />
+    </HBox>
+
+    <!-- Sidebar Menu -->
+    <VBox alignment="CENTER" layoutX="10.0" layoutY="90.0" prefWidth="200.0" spacing="15" style="-fx-background-color: #004f70; -fx-background-radius: 10; -fx-padding: 20;">
+        <Button text="Add Course" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" fx:id="btnAddCourse"/>
+        <Button text="Update Course" style="-fx-background-color: #005c8a; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" fx:id="btnUpdateCourse"/>
+        <Button text="Delete Course" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" fx:id="btnDeleteCourse"/>
+        <Button text="Reset" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10; -fx-cursor: hand;" fx:id="btnReset"/>
+    </VBox>
+
+    <!-- Course List and Details -->
+    <VBox layoutX="230.0" layoutY="90.0" prefHeight="450.0" prefWidth="650.0" spacing="20">
+        
+        <!-- Search and Filter -->
+        <HBox spacing="10">
+            <TextField fx:id="txtSearch" promptText="Search courses..." style="-fx-background-radius: 10; -fx-padding: 5;"/>
+            <Button text="Search" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10; -fx-cursor: hand;" fx:id="btnSearch"/>
+        </HBox>
+        
+        <!-- Course List -->
+        <TableView fx:id="tblCourses" prefHeight="200.0" prefWidth="600.0" style="-fx-background-radius: 10;">
+            <columns>
+                <TableColumn text="Course ID" fx:id="colCourseID"/>
+                <TableColumn text="Title" fx:id="colTitle"/>
+                <TableColumn text="Credit Hours" fx:id="colCreditHours"/>
+                <TableColumn text="Department" fx:id="colDepartment"/>
+            </columns>
+        </TableView>
+        
+        <!-- Course Details Form -->
+        <GridPane hgap="10" vgap="10" style="-fx-padding: 10;">
+            <Label text="Course ID:" style="-fx-text-fill: white;"/>
+            <TextField fx:id="txtCourseID"/>
+            <Label text="Title:" style="-fx-text-fill: white;"/>
+            <TextField fx:id="txtTitle"/>
+            <Label text="Credit Hours:" style="-fx-text-fill: white;"/>
+            <TextField fx:id="txtCreditHours"/>
+            <Label text="Department:" style="-fx-text-fill: white;"/>
+            <TextField fx:id="txtDepartment"/>
+            <Label text="Prerequisites:" style="-fx-text-fill: white;"/>
+            <TextField fx:id="txtPrerequisites"/>
+            <Label text="Max Enrollment:" style="-fx-text-fill: white;"/>
+            <TextField fx:id="txtMaxEnrollment"/>
+        </GridPane>
+    </VBox>
+</AnchorPane>
